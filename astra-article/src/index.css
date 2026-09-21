@@ -1,0 +1,137 @@
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg: #07070b;
+  --bg-soft: #0c0c13;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.075);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-soft: rgba(255, 255, 255, 0.06);
+
+  /* Ink */
+  --ink-1: #f5f5f9;
+  --ink-2: #b3b2c1;
+  --ink-3: #7d7c8c;
+
+  /* Brand gradient */
+  --violet: #8b7dff;
+  --violet-dim: #5b4fc4;
+  --cyan: #4fd8e8;
+  --magenta: #ff6fd8;
+
+  /* Data (validated pair, dark mode) */
+  --data-astra: #3987e5;
+  --data-sol: #d95926;
+
+  /* Status */
+  --good: #0ca30c;
+  --warning: #fab219;
+
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+
+  --container: 1180px;
+  --radius: 18px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink-1);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--ink-1);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--violet);
+  color: #0a0a0f;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a35;
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a48;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+}
+
+code {
+  font-family: var(--font-mono);
+}
