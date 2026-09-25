@@ -275,52 +275,6 @@
 .hero-byline strong {
   color: var(--ink-1);
 }
-.hero-nav {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-.hero-nav-label {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-}
-.hero-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-}
-.hero-nav li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.hero-nav a {
-  text-decoration: none;
-  color: var(--ink-1);
-  font-size: 0.92rem;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  transition: border-color 0.25s, background 0.25s, transform 0.25s;
-}
-.hero-nav a:hover {
-  border-color: var(--cyan);
-  background: var(--surface-strong);
-  transform: translateY(-1px);
-}
-.hero-nav-sep {
-  color: var(--ink-3);
-}
-
 .scroll-cue {
   position: absolute;
   bottom: 34px;

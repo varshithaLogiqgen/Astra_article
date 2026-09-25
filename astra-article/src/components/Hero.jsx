@@ -3,13 +3,6 @@ import { LazyCanvas } from '../three/LazyCanvas'
 import { LazyAstraOrb } from '../three/lazyScenes'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 
-const NAV = [
-  { id: 'how-it-works', label: 'How it works' },
-  { id: 'try-a-task', label: 'Try a task' },
-  { id: 'evidence', label: 'Read the evidence' },
-  { id: 'judgment', label: 'Your judgment' },
-]
-
 export function Hero() {
   const reduced = usePrefersReducedMotion()
 
@@ -56,26 +49,8 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.35 }}
         >
-          By <strong>AI Disha</strong> · Sources checked 15 September 2026
+          By <strong>AI Disha</strong>
         </motion.div>
-
-        <motion.nav
-          className="hero-nav"
-          aria-label="Jump to section"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
-        >
-          <span className="hero-nav-label">Explore</span>
-          <ul>
-            {NAV.map((item, i) => (
-              <li key={item.id}>
-                <a href={`#${item.id}`}>{item.label}</a>
-                {i < NAV.length - 1 && <span className="hero-nav-sep">/</span>}
-              </li>
-            ))}
-          </ul>
-        </motion.nav>
       </div>
 
       <motion.div
